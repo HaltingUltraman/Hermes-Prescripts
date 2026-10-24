@@ -1,0 +1,47 @@
+@import url('https://cdn.jsdelivr.net/npm/galmuri/dist/galmuri.css');
+
+.hermesCycle
+{
+    display: inline;
+    margin: 0;
+    color:#B9ECFF;
+    font-size: 100px;
+    font-family: 'Galmuri', sans-serif;
+}
+body
+{
+    background-color: black;
+}
+#hermesCommand
+{
+    display: inline;
+    margin: 0;
+    color:#B9ECFF;
+    font-size: 100px;
+    font-family: 'Galmuri', sans-serif;
+}
+.prescriptButtons
+{
+    background-color: black;
+    color: #B9ECFF;
+    outline-color: white;
+    border-color: white;
+    border: solid;
+    padding: 20px
+}
+#prescriptActivator:hover
+{
+    background-color: grey;
+}
+#prescriptActivator:disabled
+{
+    display: none;
+}
+#prescriptEnded:hover
+{
+    background-color: grey;
+}
+#prescriptEnded:disabled
+{
+    display: none;
+}
