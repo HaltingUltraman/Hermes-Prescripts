@@ -34,11 +34,12 @@ async function prescriptActivated()
         "CLEAR."];
 
     let command = commands[Math.floor(Math.random() * (commands.length - 1))];
+    let commandLength = command.length;
 
-    for (let i = 0; i < command.length; ++i)
+    for (let i = 0; i < commandLength; ++i)
     {
         document.getElementById("hermesCommand").textContent += command[i];
-        await delay(50);
+        await delay(2000 / commandLength);
     }
 
     document.getElementById("prescriptEnded").disabled = false;
@@ -48,11 +49,12 @@ async function prescriptFinished()
 {
     document.getElementById("prescriptAudio2").play();
     document.getElementById("prescriptEnded").disabled = true;
+    let commandLength = document.getElementById("hermesCommand").textContent.length;
 
-    for (let i = document.getElementById("hermesCommand").textContent.length; i > 0; --i)
+    for (let i = commandLength; i > 0; --i)
     {
         document.getElementById("hermesCommand").textContent = document.getElementById("hermesCommand").textContent.slice(0, -1);
-        await delay(50);
+        await delay(2000 / commandLength);
     }
 
     document.getElementById("prescriptActivator").disabled = false;
